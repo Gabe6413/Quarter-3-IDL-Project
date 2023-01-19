@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Images/BaseApartment.png" type="Texture" id=1]
+[ext_resource path="res://Images/Barriers.png" type="Texture" id=2]
+[ext_resource path="res://Images/GameButtonHolder.png" type="Texture" id=3]
+[ext_resource path="res://Images/GameButtons/Settings.png" type="Texture" id=4]
+[ext_resource path="res://Images/GameButtons/Actions.png" type="Texture" id=5]
+[ext_resource path="res://Images/GameButtons/Inventory.png" type="Texture" id=6]
+[ext_resource path="res://Images/GameButtons/Status.png" type="Texture" id=7]
+
+[node name="World" type="Node2D"]
+
+[node name="BaseApartment" type="Sprite" parent="."]
+scale = Vector2( 0.517, 0.555 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Button Holder" type="Sprite" parent="."]
+scale = Vector2( 0.517, 0.555 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button Holder"]
+margin_left = 153.0
+margin_right = 616.0
+margin_bottom = 321.0
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Status Button" type="TextureButton" parent="Button Holder/VBoxContainer"]
+margin_top = 34.0
+margin_right = 463.0
+margin_bottom = 94.0
+texture_normal = ExtResource( 7 )
+
+[node name="Inventory Button" type="TextureButton" parent="Button Holder/VBoxContainer"]
+margin_top = 98.0
+margin_right = 463.0
+margin_bottom = 158.0
+texture_normal = ExtResource( 6 )
+
+[node name="Actions Button" type="TextureButton" parent="Button Holder/VBoxContainer"]
+margin_top = 162.0
+margin_right = 463.0
+margin_bottom = 222.0
+texture_normal = ExtResource( 5 )
+
+[node name="Settings Button" type="TextureButton" parent="Button Holder/VBoxContainer"]
+margin_top = 226.0
+margin_right = 463.0
+margin_bottom = 286.0
+texture_normal = ExtResource( 4 )
+
+[node name="Barriers" type="Sprite" parent="."]
+scale = Vector2( 0.517, 0.555 )
+texture = ExtResource( 2 )
+centered = false
